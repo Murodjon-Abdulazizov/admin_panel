@@ -18,7 +18,7 @@ formResult.addEventListener('submit', async function(e){
   reader.onloadend = async function () {
     var base64String = reader.result.replace("data:", "").replace(/^.+,/, "");
 
-    await fetch("http://185.217.131.149:5000/api/v1/result",{
+    await fetch("https://api.uzuniver.uz/api/v1/result",{
       method: 'POST',
       body:JSON.stringify({
         image: base64String, 

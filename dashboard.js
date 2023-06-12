@@ -1,5 +1,5 @@
 async function getContact(){
-  let url = 'http://185.217.131.149:5000/api/v1/contact';
+  let url = 'https://api.uzuniver.uz/api/v1/contact';
   let response = await fetch(url)
   let nimadir = await response.json()
   let tayyor = nimadir.content;
@@ -24,7 +24,7 @@ getContact()
 
 
 async function getCourse(){
-  let url = 'http://185.217.131.149:5000/api/v1/course';
+  let url = 'https://api.uzuniver.uz/api/v1/course';
   let response = await fetch(url)
   let nimadir = await response.json()
   let tayyor = nimadir.content
@@ -47,7 +47,7 @@ getCourse()
 
 
 async function getCourseAdmin(){
-  let url = 'http://185.217.131.149:5000/api/v1/course';
+  let url = 'https://api.uzuniver.uz/api/v1/course';
   let response = await fetch(url)
   let nimadir = await response.json()
   let tayyor = nimadir.content
@@ -72,7 +72,7 @@ getCourseAdmin()
 
 
 async function getResult(){
-  let url = 'http://185.217.131.149:5000/api/v1/result';
+  let url = 'https://api.uzuniver.uz/api/v1/result';
   let response = await fetch(url)
   let nimadir = await response.json()
   let tayyor = nimadir.content
@@ -92,7 +92,7 @@ async function getResult(){
 getResult()
 
 async function getResultAdmin(){
-  let url = 'http://185.217.131.149:5000/api/v1/result';
+  let url = 'https://api.uzuniver.uz/api/v1/result';
   let response = await fetch(url)
   let nimadir = await response.json()
   let tayyor = nimadir.content
@@ -125,7 +125,7 @@ form.addEventListener('submit',async function(e){
   var number = document.getElementById('number').value
   var message = document.getElementById('message').value
 
-  await fetch("http://185.217.131.149:5000/api/v1/contact/",{
+  await fetch("https://api.uzuniver.uz/api/v1/contact/",{
     method: 'POST',
     body:JSON.stringify({
       name:name, 
@@ -154,7 +154,7 @@ form.addEventListener('submit',async function(e){
 
 
 async function deleteResult(id){
-  const res  = await fetch(`http://185.217.131.149:5000/api/v1/result/${id}`,
+  const res  = await fetch(`https://api.uzuniver.uz/api/v1/result/${id}`,
   {
     method: 'DELETE',
     headers:{
@@ -172,7 +172,7 @@ async function deleteResult(id){
 }
 
 async function deleteCourse(id){
-  const res  = await fetch(`http://185.217.131.149:5000/api/v1/course/${id}`,
+  const res  = await fetch(`https://api.uzuniver.uz/api/v1/course/${id}`,
   {
     method: 'DELETE',
     headers:{
@@ -192,7 +192,7 @@ async function deleteCourse(id){
 }
 
 async function deleteContact(id){
-  const res  = await fetch(`http://185.217.131.149:5000/api/v1/contact/${id}`,
+  const res  = await fetch(`https://api.uzuniver.uz/api/v1/contact/${id}`,
   {
     method: 'DELETE',
     headers:{
